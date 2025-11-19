@@ -8,11 +8,34 @@ After forking this repository, you can make some changes to the project, and sub
 
 For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
 
+![label: Content](https://img.shields.io/github/labels/github/docs/content)
 
 ```mermaid
 graph TB;
-  A1[<a href='https://disney.com'>Opening Event</a>]-->A2[an <b>important</b> <a href='https://disney.com'>link</a>];
-  A2-->C;
-B-->D;
-C-->D;
+  A1[<a href='https://disney.com'>Opening Event</a>]
+  A2[<a href='https://disney.com'>link</a>];
+  A1-->A2;
+  B-->D;
+  C-->D;
+```
+```mermaid
+flowchart LR
+subgraph Department A
+A[Step 1]
+end
+subgraph Department B
+B[Step 2]
+end
+subgraph Department C
+subgraph Sub-Dept C1
+C[Step 3]
+end
+subgraph Sub-Dept C2
+D[Step 4]
+end
+end
+A --> B --> C
+D --> B
+
+
 ```
